@@ -7,7 +7,7 @@ def generate_anti_noise(input_file, output_file):
 
     # Invert the phase by multiplying by -1
     # This flips the waveform across the x-axis
-    anti_noise = data * -1
+    anti_noise = data * 0.1
 
     # Save the result as a new wav file
     # We use the same sample rate to ensure timing matches
@@ -16,4 +16,4 @@ def generate_anti_noise(input_file, output_file):
     print(f"Anti-noise file generated: {output_file}")
 
 # Usage
-generate_anti_noise('test.wav', 'phase_inverted_sound.wav')
+generate_anti_noise('test.wav', 'quiet.wav')
